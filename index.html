@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اژانس هواپیمایی پرتوt</title>
+     <link rel="script" href="./redux.js">
+</head>
+<body>
+    <div class="container mx-auto px-4">
+        <header class="py-4">
+          <h1 class="text-3xl font-bold">شرکت هواپیمایی</h1>
+        </header>
+        <section class="py-4">
+          <div class="flex flex-wrap">
+            <div class="w-full md:w-1/2">
+              <img src="https://picsum.photos/2000/1000" alt="عکس شرکت هواپیمایی">
+            </div>
+            <div class="w-full md:w-1/2">
+              <p>
+                ...
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="py-4">
+          <h2 class="text-2xl font-bold">مقصدها</h2>
+          <ul class="list-reset">
+            <li>
+              <a href="#">تهران</a>
+            </li>
+            <li>
+              <a href="#">اصفهان</a>
+            </li>
+            <li>
+              <a href="#">مشهد</a>
+            </li>
+            <li>
+              <a href="#">شیراز</a>
+            </li>
+          </ul>
+        </section>
+        <section class="py-4">
+          <h2 class="text-2xl font-bold">هواپیماها</h2>
+          <ul class="list-reset">
+            <li>
+              <a href="#">ایرباس A320</a>
+            </li>
+            <li>
+              <a href="#">بوئینگ 737</a>
+            </li>
+            <li>
+              <a href="#">ایرباس A330</a>
+            </li>
+            <li>
+              <a href="#">بوئینگ 777</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="container mx-auto px-4">
+        <header class="py-4">
+          <h1 class="text-3xl font-bold">جستجوی پرواز</h1>
+        </header>
+        <form action="/search" method="post">
+          <div class="mb-4">
+            <label for="from" class="block text-gray-700">مبدأ</label>
+            <input type="text" id="from" name="from" class="form-control w-full" placeholder="تهران">
+          </div>
+          <div class="mb-4">
+            <label for="to" class="block text-gray-700">مقصد</label>
+            <input type="text" id="to" name="to" class="form-control w-full" placeholder="اصفهان">
+          </div>
+          <div class="mb-4">
+            <label for="date" class="block text-gray-700">تاریخ</label>
+            <input type="date" id="date" name="date" class="form-control w-full">
+          </div>
+          <div class="mb-4">
+            <label for="passengers" class="block text-gray-700">تعداد مسافران</label>
+            <input type="number" id="passengers" name="passengers" class="form-control w-full" min="1" max="100">
+          </div>
+          <button type="submit" class="btn btn-
+          <button type="submit" class="btn btn-primary">جستجو</button>
+        </form>
+      </div>
+      <div class="container mx-auto px-4">
+        <header class="py-4">
+          <h1 class="text-3xl font-bold">نتایج جستجو</h1>
+        </header>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>شماره پرواز</th>
+              <th>مبدأ</th>
+              <th>مقصد</th>
+              <th>تاریخ</th>
+              <th>زمان</th>
+              <th>قیمت</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>IR624</td>
+              <td>تهران</td>
+              <td>اصفهان</td>
+              <td>2023-07-20</td>
+              <td>10:00</td>
+              <td>1,000,000 تومان</td>
+            </tr>
+            <tr>
+              <td>IR632</td>
+              <td>تهران</td>
+              <td>مشهد</td>
+              <td>2023-07-21</td>
+              <td>12:00</td>
+              <td>1,200,000 تومان</td>
+            </tr>
+            <tr>
+              <td>IR640</td>
+              <td>تهران</td>
+              <td>شیراز</td>
+              <td>2023-07-22</td>
+              <td>14:00</td>
+              <td>1,400,000 تومان</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="container mx-auto px-4">
+        <header class="py-4">
+          <h1 class="text-3xl font-bold">رزرو بلیط</h1>
+        </header>
+        <form action="/book" method="post">
+          <input type="hidden" name="flightId" value="IR624">
+          <div class="mb-4">
+            <label for="passengers" class="block text-gray-700">تعداد مسافران</label>
+            <input type="number" id="passengers" name="passengers" class="form-control w-full" min="1" max="100">
+          </div>
+          <button type="submit" class="btn btn-primary">رزرو</button>
+        </form>
+      </div>
+      <div class="container mx-auto px-4">
+        <header class="py-4">
+          <h1 class="text-3xl font-bold">پیگیری پرواز</h1>
+        </header>
+        <form action="/track" method="post">
+          <input type="hidden" name="flightId" value="IR624">
+          <div class="mb-4">
+            <label for="passengers" class="block text-gray-700">شماره پرواز</label>
+            <input type="number" id="flightId" name="flightId" class="form-control w-full">
+          </div>
+          <button type="submit" class="btn btn-primary">پیگیری</button>
+        </form>
+      </div>
+                                    
+</body>
+</html>
